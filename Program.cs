@@ -10,30 +10,34 @@ namespace ShoppingCart
     {
         static void Main(string[] args)
         {
-            List<string> test = new List<string>();
-            test.Add("orange");
-            test.Add("orange");
-            test.Add("apple");
-            Console.WriteLine("The cost of your shopping cart is : "+cost(test));
+            Cart exo = new Cart("exo");
+            //List<Product> test = new List<Product>();
+            Product app1 = new Product("apple");
+            Product app2 = new Product("apple");
+            Product or1 = new Product("orange");
+            Product or2 = new Product("orange");
+            Product or3 = new Product("orange");
+            exo.content.Add(app1);
+            exo.content.Add(app2);
+            exo.content.Add(or1);
+            exo.content.Add(or2);
+            exo.content.Add(or3);
+            double cost = exo.Cost();
+            double final = exo.promo(cost);
+            Console.WriteLine("The cost of your shopping cart is : "+final);
             Console.ReadLine();
 
         }
-        static double cost(List<string> cart)
-        {
-            double cost = 0;
-            foreach(string s in cart)
-            {
-                if(s.ToUpper()=="ORANGE")
-                {
-                    cost = cost + 0.25;
-                }
-                if(s.ToUpper()=="APPLE")
-                {
-                    cost = cost + 0.60;
-                }
+        //static double cost(List<Product> cart)
+        //{
+        //    double cost = 0;
+        //    foreach(Product s in cart)
+        //    {
+        //        cost = cost + s.cost;
                 
-            }
-            return cost;
-        }
+        //    }
+        //    return cost;
+        //}
+
     }
 }
