@@ -11,7 +11,6 @@ namespace ShoppingCart
         static void Main(string[] args)
         {
             Cart exo = new Cart("exo");
-            //List<Product> test = new List<Product>();
             Product app1 = new Product("apple");
             Product app2 = new Product("apple");
             Product or1 = new Product("orange");
@@ -28,16 +27,7 @@ namespace ShoppingCart
             Console.ReadLine();
 
         }
-        //static double cost(List<Product> cart)
-        //{
-        //    double cost = 0;
-        //    foreach(Product s in cart)
-        //    {
-        //        cost = cost + s.cost;
-                
-        //    }
-        //    return cost;
-        //}
+        
 
     }
 }
